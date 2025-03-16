@@ -1,0 +1,7 @@
+node_modules
+pnpm-lock.yaml
+cursorignore
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+
