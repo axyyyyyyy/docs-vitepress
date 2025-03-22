@@ -4,6 +4,13 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
+// components
+import VPBArchives from './components/VPBArchives.vue'
+// export { default as VPBArchives } from './components/VPBArchives.vue'
+
+// composables
+// export { useArchives } from './composables/useArchives'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -13,5 +20,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    app.component('VPBArchives', VPBArchives)
   }
 } satisfies Theme
