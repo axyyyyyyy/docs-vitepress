@@ -6,6 +6,7 @@ import './style.css'
 
 // components
 import VPBArchives from './components/VPBArchives.vue'
+import VPBTags from './components/VPBTags.vue'
 // export { default as VPBArchives } from './components/VPBArchives.vue'
 
 // composables
@@ -21,5 +22,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // ...
     app.component('VPBArchives', VPBArchives)
+    app.component('VPBTags', VPBTags)
   }
 } satisfies Theme

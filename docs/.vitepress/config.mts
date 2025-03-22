@@ -38,33 +38,34 @@ export default defineConfig({
   nav: [
     { text: '🏠 首页', link: '/' },
     { text: '📚 归档', link: '/archives' },
+    { text: '🏷️ 标签', link: '/tags' },
     {
       text: '📝 笔记',
       items: [
-        { text: '后端', link: '/notes/backend' },
-        { text: '前端', link: '/notes/frontend' },
-        { text: '学习', link: '/notes/learn' }
+        { text: '生活', link: '/notes/life' },
+        { text: '学习', link: '/notes/learn' },
+        { text: '工具', link: '/notes/tools' }
       ]
     }
   ],
 
     sidebar: generateSidebar([{
       documentRootPath: 'docs',
-      scanStartPath: 'notes/backend',
-      resolvePath: '/notes/backend/',
-      collapsed: false,
-      debugPrint: false
-    },{
-      documentRootPath: 'docs',
-      scanStartPath: 'notes/frontend',
-      resolvePath: '/notes/frontend/',
-      useFolderLinkFromIndexFile: true,
+      scanStartPath: 'notes/life',
+      resolvePath: '/notes/life/',
       collapsed: false,
       debugPrint: false
     },{
       documentRootPath: 'docs',
       scanStartPath: 'notes/learn',
       resolvePath: '/notes/learn/',
+      useFolderLinkFromIndexFile: true,
+      collapsed: false,
+      debugPrint: false
+    },{
+      documentRootPath: 'docs',
+      scanStartPath: 'notes/tools',
+      resolvePath: '/notes/tools/',
       useFolderLinkFromIndexFile: true,
       collapsed: false,
       debugPrint: false

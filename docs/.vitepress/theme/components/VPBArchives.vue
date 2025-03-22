@@ -22,7 +22,7 @@ const { theme } = useData()
       </p>
     </div>
 
-    <div v-if="postsByYear && postsByYear.length > 0" class="space-y-8">
+    <div v-if="postsByYear && postsByYear.length > 0" class="space-y-6">
       <div v-for="(year, yearIndex) in postsByYear" :key="yearIndex" class="rounded-lg bg-gray-50 p-6 shadow-sm dark:bg-gray-800/20">
         <div
           class="mb-4 border-b border-gray-200 pb-3 text-2xl font-bold text-[--vp-c-brand-light] dark:border-gray-700 dark:text-[--vp-c-brand-dark]"
