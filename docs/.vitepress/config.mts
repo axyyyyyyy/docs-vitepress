@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 import UnoCSS from 'unocss/vite'
-import { localSearchOptions } from './theme/search/local-search'
-import { algoliaSearchOptions } from './theme/search/algolia-search'
+import { localSearchOptions } from './theme/search-plugins/local-search'
+import { algoliaSearchOptions } from './theme/search-plugins/algolia-search'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
