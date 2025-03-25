@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
-import tailwindcss from '@tailwindcss/vite'
 import UnoCSS from 'unocss/vite'
 import { localSearchOptions } from './theme/search/local-search'
 
