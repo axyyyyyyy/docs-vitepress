@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 import UnoCSS from 'unocss/vite'
 import { localSearchOptions } from './theme/search/local-search'
+import { algoliaSearchOptions } from './theme/search/algolia-search'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -83,9 +84,11 @@ export default defineConfig({
     },
 
     search: {
-    // 本地离线搜索
-      provider: 'local',
-      options: localSearchOptions
+      // 本地离线搜索
+      // provider: 'local',
+      // options: localSearchOptions
+      provider: 'algolia',
+      options: algoliaSearchOptions
     },
 
   }
