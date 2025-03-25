@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 import tailwindcss from '@tailwindcss/vite'
+import UnoCSS from 'unocss/vite'
 import { localSearchOptions } from './theme/search/local-search'
 
 // https://vitepress.dev/reference/site-config
@@ -18,8 +19,9 @@ export default defineConfig({
     }
   },
   vite: {
-    // @ts-ignore - 忽略类型错误
-    plugins: [tailwindcss()],
+    plugins: [
+      UnoCSS()
+    ],
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

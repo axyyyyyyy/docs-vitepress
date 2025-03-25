@@ -137,5 +137,5 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+/* @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *)); */
