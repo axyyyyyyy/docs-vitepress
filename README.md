@@ -1,17 +1,17 @@
 # VitePress Knowledge Base
 
-A modern documentation site built with VitePress and styled with Tailwind CSS 4.
+A modern documentation site built with VitePress and styled with UnoCSS.
 
 ## Tech Stack
 
 - [VitePress](https://vitepress.dev/) - A Vite & Vue powered static site generator
-- [Tailwind CSS 4](https://tailwindcss.com/) - A utility-first CSS framework
+- [UnoCSS](https://unocss.dev/) - The instant on-demand atomic CSS engine
 - [Vue 3](https://vuejs.org/) - The Progressive JavaScript Framework
 
 ## Features
 
 - 📝 Markdown-driven documentation
-- 🎨 Modern UI design with Tailwind CSS
+- 🎨 Modern UI design with UnoCSS
 - ⚡️ Lightning fast development and build
 - 🔍 Built-in full-text search
 - 📱 Responsive design for all devices
@@ -21,19 +21,19 @@ A modern documentation site built with VitePress and styled with Tailwind CSS 4.
 1. Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 2. Start development server:
 
 ```bash
-npm run docs:dev
+pnpm run docs:dev
 ```
 
 3. Build for production:
 
 ```bash
-npm run docs:build
+pnpm run docs:build
 ```
 
 ## Project Structure
