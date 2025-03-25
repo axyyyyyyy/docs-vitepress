@@ -13,13 +13,13 @@ function tagSwitcher(tag: string) {
 </script>
 
 <template>
-  <div class="mx-auto max-w-screen-xl px-6 py-8 lg:px-16 lg:py-16">
+  <div class="container max-w-screen-xl mx-auto px-4 py-8 md:px-8 lg:px-16">
     <!-- 头部标题区域 -->
-    <div class="mx-auto mb-10 max-w-screen-sm text-center lg:mb-16">
-      <div class="mb-4 flex flex-col items-center justify-center text-4xl font-extrabold tracking-tight text-[--vp-c-brand-light] dark:text-[--vp-c-brand-dark] lg:text-4xl">
-        <span>{{ theme.blog?.title || '' }} 标签</span>
+    <div class="max-w-2xl mx-auto mb-10 text-center">
+      <div class="mb-4 flex flex-col items-center justify-center">
+        <span class="text-4xl font-extrabold tracking-tight text-primary">{{ theme.blog?.title || '' }} 标签</span>
       </div>
-      <p class="font-light text-[--vp-c-text-light-1] dark:text-[--vp-c-text-dark-1] sm:text-xl">
+      <p class="text-base md:text-lg text-gray-600 dark:text-gray-400">
         {{ theme.blog?.description || '按标签浏览所有文章' }}
       </p>
     </div>
@@ -29,19 +29,21 @@ function tagSwitcher(tag: string) {
       <button 
         v-for='(posts, tag) in tags' 
         @click='tagSwitcher(`${tag}`)' 
-        class="px-4 py-2 rounded-full text-sm font-medium flex items-center space-x-2 bg-gray-50 dark:bg-gray-800/20 hover:bg-[--vp-c-brand-light] hover:text-white dark:hover:bg-[--vp-c-brand-dark] shadow-sm transition-all duration-200"
-        :class="{'bg-[--vp-c-brand-light] text-white dark:bg-[--vp-c-brand-dark]': blogStore.selectedTag === tag}"
+        class="px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-colors duration-200 shadow-sm"
+        :class="blogStore.selectedTag === tag 
+          ? 'bg-primary text-white' 
+          : 'bg-gray-100 dark:bg-gray-800 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark'"
       >
         <span>{{ tag }}</span>
-        <span class="text-xs px-2 py-0.5 rounded-full bg-gray-200/70 dark:bg-gray-700/70">{{ posts.length }}</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-white/50 dark:bg-black/20">{{ posts.length }}</span>
       </button>
     </div>
 
     <!-- 选中标签的文章列表 -->
-    <div v-if="blogStore.selectedTag" class="rounded-lg bg-gray-50 p-6 shadow-sm dark:bg-gray-800/20">
+    <div v-if="blogStore.selectedTag" class="bg-gray-50 dark:bg-gray-800/20 rounded-lg p-6 shadow-sm">
       <!-- 标签标题 -->
-      <div class="mb-4 border-b border-gray-200 pb-3 text-2xl font-bold text-[--vp-c-brand-light] dark:border-gray-700 dark:text-[--vp-c-brand-dark] flex items-center justify-between">
-        <div class="flex items-center space-x-2">
+      <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+        <div class="flex items-center gap-2 text-2xl font-bold text-primary">
           <span>#</span>
           <span>{{ blogStore.selectedTag }}</span>
         </div>
@@ -55,11 +57,11 @@ function tagSwitcher(tag: string) {
         <a 
           v-for='post in tags[blogStore.selectedTag]' 
           :href='withBase(post.url)'
-          class="group flex items-center justify-between rounded-md p-2 transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700/30"
+          class="group flex items-center justify-between p-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700/30"
         >
-          <div class="flex items-center space-x-2">
-            <div class="h-2 w-2 rounded-full bg-gray-300 group-hover:bg-[--vp-c-brand-light] dark:bg-gray-600 dark:group-hover:bg-[--vp-c-brand-dark]"></div>
-            <span class="font-medium transition-colors group-hover:text-[--vp-c-brand-dark] dark:group-hover:text-[--vp-c-brand-light]">
+          <div class="flex items-center gap-2">
+            <div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary"></div>
+            <span class="font-medium transition-colors group-hover:text-primary">
               {{ post.title }}
             </span>
           </div>
@@ -71,7 +73,8 @@ function tagSwitcher(tag: string) {
     </div>
     
     <!-- 空状态 -->
-    <div v-else class="my-16 rounded-lg bg-gray-50 p-8 text-center dark:bg-gray-800/20">
+    <div v-else class="my-16 text-center bg-gray-50 dark:bg-gray-800/20 rounded-lg p-8">
+      <div class="i-carbon-tag-group text-4xl mb-4 text-gray-400 dark:text-gray-600 mx-auto"></div>
       <p class="text-lg text-gray-500 dark:text-gray-400">请选择一个标签查看相关文章</p>
     </div>
   </div>

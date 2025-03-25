@@ -18,15 +18,15 @@ hero:
   #     link: /api-examples
 
 features:
-  - title: 多样的主题和内容
-    details: 本知识库和所生成的页面均由创作者们维护，涉及到生活中各方面知识和内容，也不乏我们的回忆和畅想。
-    icon: 🌈
-  - title: 皆为 Markdown
-    details: 使用 Markdown 和 Markdown 拓展语法编写和记录笔记，每一个页面都是 Markdown 文件。
-    icon: 📃
-  - title: 由 VitePress 驱动
-    details: 基于 Vite 的强大静态文档页面生成器，它生成了我们知识库的页面，提供了简单易用的主题和工具。
-    icon: 🚀
+  - title: 丰富的知识内容
+    details: 涵盖技术、生活、学习等多个领域的优质内容，由创作者精心维护和更新，让知识分享更有价值。
+    icon: 📚
+  - title: Markdown 驱动
+    details: 采用简洁优雅的 Markdown 语法，支持丰富的扩展功能，让写作和阅读体验更加流畅自然。
+    icon: ✍️
+  - title: 现代化技术栈
+    details: 基于 VitePress 构建，提供极速的页面加载体验，支持响应式设计，完美适配各种设备。
+    icon: ⚡
 ---
 
 
