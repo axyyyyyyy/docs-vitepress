@@ -61,7 +61,7 @@ export default createContentLoader('notes/**/*.md', {
 })
 
 function formatDate(raw: string) {
-  console.log('Raw date:', raw)
+  // console.log('Raw date:', raw)
   if (raw === undefined) {
     return {
       raw: '',

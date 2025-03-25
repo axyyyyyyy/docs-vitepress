@@ -6,7 +6,7 @@ export function useArchives() {
   let num = -1
   for (let i = 0; i < posts.length; i++) {
     const post = posts[i]
-    console.log(post)
+    // console.log(post)
     if (post.date) {
       const y = post.date.raw.split('-')[0]
       if (y === year) {
@@ -18,7 +18,7 @@ export function useArchives() {
         year = y
       }
     }
-    console.log(postsByYear)
+    // console.log(postsByYear)
   }
   return { postsByYear }
 }
